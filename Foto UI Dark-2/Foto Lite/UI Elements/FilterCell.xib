@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="FilterCell" customModule="Tahrir_Lite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-kM-GS5" customClass="MetalKitView" customModule="Tahrir_Lite" customModuleProvider="target">
+                        <rect key="frame" x="25" y="25" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="aZj-Ug-kH6"/>
+                            <constraint firstAttribute="height" constant="100" id="bT1-sp-RY5"/>
+                        </constraints>
+                    </mtkView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlB-9X-rbR">
+                        <rect key="frame" x="0.0" y="128" width="150" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gdl-kM-GS5" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="O6Q-Oj-cbn"/>
+                <constraint firstItem="gdl-kM-GS5" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XzM-OA-T42"/>
+                <constraint firstItem="zlB-9X-rbR" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="enh-p3-avb"/>
+                <constraint firstItem="zlB-9X-rbR" firstAttribute="top" secondItem="gdl-kM-GS5" secondAttribute="bottom" constant="3" id="fWm-N2-nZ3"/>
+                <constraint firstItem="zlB-9X-rbR" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pGw-iJ-wWt"/>
+                <constraint firstItem="zlB-9X-rbR" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="te2-DW-U8c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="150" height="148"/>
+            <connections>
+                <outlet property="filterName" destination="zlB-9X-rbR" id="WLE-2O-xke"/>
+                <outlet property="mtkView" destination="gdl-kM-GS5" id="Mcz-UQ-4ys"/>
+            </connections>
+            <point key="canvasLocation" x="81.599999999999994" y="145.72713643178412"/>
+        </collectionViewCell>
+    </objects>
+</document>
